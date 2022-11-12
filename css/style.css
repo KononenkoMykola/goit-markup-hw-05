@@ -78,9 +78,7 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 padding: 32px 0 31px;
 position: relative;
-transition-property: color;
-transition-duration: 250ms;
-transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);  
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
@@ -111,9 +109,7 @@ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.02em;
     display: flex;
     margin-left: auto;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-us .item+.item{
     margin-left: 50px;
@@ -127,9 +123,7 @@ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-us .link .item-icon{
     fill: var(--primary-text-color);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-us.link :hover .item-icon,.contact-us.link :focus .item-icon{
     fill: var(--accent-color);
@@ -324,15 +318,11 @@ line-height: 1.19;
     justify-content: center;
     border-radius: 50%;
     background-color:var(--secondary-title-text-color);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-workers .social-icon{
     fill: var(--primary-icon-color);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* CLIENTS */
@@ -366,9 +356,7 @@ margin-bottom: 50px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list .social-item{
     width: 170px;
@@ -380,9 +368,7 @@ margin-bottom: 50px;
 .clients-list .item-icon{
     width: 106px;
     height: 90px;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .clients-list .link:hover,.clients-list .link:focus{
@@ -410,9 +396,7 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
 border: none;
-transition-property: background-color color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.primary:hover, .button.primary:focus {
 
@@ -430,9 +414,7 @@ transition-property: background-color color;
     line-height: 1.6;
     border-radius: 4px;
     border: none;
-    transition-property: background-color color box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.secondary:hover, .button.secondary:focus{
     background: var(--accent-color);
@@ -478,9 +460,7 @@ font-size: 14px;
 line-height: 1.71;
 margin-top: 0;
 margin-bottom: 0;
-transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress :hover, .adress :focus{
     color: var(--accent-color);
@@ -516,9 +496,7 @@ margin-bottom: 20px;
     justify-content: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-icons{
     display: flex;
@@ -547,13 +525,12 @@ margin-bottom: 20px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ; 
 }
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 .modal{
     position: absolute;
@@ -568,7 +545,7 @@ margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
     padding: 8px;
-    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ; 
 }
 .modal-icon{
     
@@ -635,10 +612,8 @@ letter-spacing: 0.03em;
 color: var(--secondary-title-text-color);
 background-color: rgba(33, 150, 243, 0.9);
 padding: 63px 24px;
-transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ; 
     
 }
 
@@ -648,9 +623,7 @@ transition-property: all;
     margin-bottom: 30px;
     border: 1px solid #EEEEEE;
     border-top: none;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples .item:nth-child(3n){
     margin-right: 0;
@@ -658,8 +631,10 @@ transition-property: all;
 .examples .item:nth-last-child(-n+3){
     margin-bottom: 0;
 }
-.examples .item:hover .card-discription,.examples .item:focus .card-discription{
+.examples .item:hover,.examples .item:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.examples .item:hover .card-discription,.examples .item:focus .card-discription{
     transform: translateY(0);
 }
 .examples-title{
